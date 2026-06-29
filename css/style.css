@@ -208,7 +208,7 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
 }
 
 /* ============ SECTION COMMON ============ */
-.section{padding:140px 0;display:flex;align-items:center;scroll-snap-align:start}
+.section{padding:140px 0 0;display:flex;align-items:center;scroll-snap-align:start}
 .section>.container{width:100%}
 .section.dark{background:var(--navy);color:#f1efe9}
 .section-head{margin-bottom:64px}
@@ -306,7 +306,7 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
 .bk-sec.point-sec{display:block;padding:0;background:#fff;scroll-snap-align:start}
 /* 상단: 좌 텍스트 + 우 건물 이미지 */
 .bk-top{position:relative;overflow:hidden;background:#fff}
-.bk-top .container{position:relative;z-index:2;padding-top:96px;padding-bottom:96px}
+.bk-top .container{position:relative;z-index:2;padding-top:140px;padding-bottom:96px}
 .bk-head{display:grid;grid-template-columns:1.15fr 1fr;gap:50px;align-items:end;margin:0}
 .bk-eyebrow{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;letter-spacing:.03em;color:var(--navy);margin-bottom:16px}
 .bk-title{font-size:clamp(30px,3.6vw,46px);font-weight:800;color:var(--navy);line-height:1.25}
@@ -687,7 +687,7 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   .wyndham-stats{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:820px){
-  .section{padding:64px 0}
+  .section{padding:64px 0 0}
   .intro-grid{grid-template-columns:1fr}
   .hf-item{flex:0 0 100%;border-right:none}
   .floor-panel{grid-template-columns:minmax(0,1fr)}
@@ -696,7 +696,7 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   .floor-tabs{flex-wrap:wrap}
   .fp-info{padding:28px 24px}
   /* 6번째 상단: 모바일은 제목/설명 세로 + 이미지(apt-bg2) 아래로 */
-  .bk-top .container{padding:56px 24px 28px}
+  .bk-top .container{padding:64px 24px 28px}
   .bk-head{grid-template-columns:1fr;gap:20px}
   .bk-desc{font-size:15px}
   .bk-hero-img{display:block;position:relative;width:100%;height:220px;
@@ -718,7 +718,7 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   .invest-grid{grid-template-columns:1fr}
   /* 상담+푸터: 모바일은 100vh 강제 해제 + 위아래 여백 */
   .last-screen{height:auto}
-  .contact{padding:44px 0}
+  .contact{padding:64px 0 0}
   .contact-wrap{grid-template-columns:1fr;gap:18px;text-align:center}
   .contact-left{text-align:center}
   .contact-lead{margin-top:2px;font-size:14px}
