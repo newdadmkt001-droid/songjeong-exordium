@@ -1,0 +1,33 @@
+/**
+ * 송정 엑소디움 — 상담신청 → 구글시트 저장
+ * 구글 시트 > 확장 프로그램 > Apps Script 에 아래 코드를 붙여넣고 배포하세요.
+ */
+function doPost(e) {
+  var lock = LockService.getScriptLock();
+  lock.waitLock(20000);
+  try {
+    var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+    // 첫 실행 시 헤더가 없으면 추가
+    if (sheet.getLastRow() === 0) {
+      sheet.appendRow(['접수시각', '성함', '연락처', '유입(source)', '타입', '메모']);
+    }
+    var p = (e && e.parameter) ? e.parameter : {};
+    sheet.appendRow([
+      new Date(),
+      p.name || '',
+      "'" + (p.phone || ''),   // 앞자리 0 유지 위해 텍스트로
+      p.source || '',
+      p.type || '',
+      p.message || ''
+    ]);
+    return ContentService
+      .createTextOutput(JSON.stringify({ result: 'success' }))
+      .setMimeType(ContentService.MimeType.JSON);
+  } catch (err) {
+    return ContentService
+      .createTextOutput(JSON.stringify({ result: 'error', message: String(err) }))
+      .setMimeType(ContentService.MimeType.JSON);
+  } finally {
+    lock.releaseLock();
+  }
+}

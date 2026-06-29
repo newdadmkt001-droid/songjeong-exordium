@@ -147,11 +147,20 @@
 
   // 폼 제출 처리
   // ※ 실제 DB 연동: 아래 sendLead() 안에서 서버 API / 구글시트 / 메일 전송으로 교체하세요.
+  // 구글 시트 연동: 아래 URL을 본인 Apps Script 웹앱 주소로 교체하세요.
+  var LEAD_ENDPOINT = 'PASTE_GOOGLE_APPS_SCRIPT_WEBAPP_URL';
+
   function sendLead(data) {
-    // TODO: 백엔드 연동 지점
-    // 예) fetch('/api/lead', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data)})
     console.log('[관심고객 DB]', data);
-    return Promise.resolve();
+    if (!LEAD_ENDPOINT || LEAD_ENDPOINT.indexOf('http') !== 0) {
+      return Promise.resolve(); // 엔드포인트 미설정 시 통과(개발용)
+    }
+    return fetch(LEAD_ENDPOINT, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
+      body: new URLSearchParams(data).toString()
+    }).then(function () {}).catch(function () {});
   }
 
   document.querySelectorAll('form[data-form]').forEach(function (form) {
