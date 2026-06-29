@@ -594,6 +594,7 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   display:flex;flex-direction:column;align-items:center;justify-content:center;
   box-shadow:0 10px 28px rgba(198,160,88,.5);transition:.25s;text-align:center;line-height:1.15}
 .float-btn:hover{transform:scale(1.07)}
+.float-tel{background:var(--navy);color:#fff;box-shadow:0 10px 28px rgba(12,22,38,.45)}
 .float-icon{font-size:26px}
 .float-txt{font-size:14px;font-weight:800;margin-top:3px}
 .top-btn{width:88px;height:88px;border-radius:50%;border:none;cursor:pointer;
@@ -698,13 +699,14 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   .price-vs{transform:rotate(90deg)}
   /* 하단 고정 바(전화상담/관심고객등록) 제거 */
   .mobile-cta-bar{display:none}
-  /* 우측 플로팅: 상담신청 + TOP 유지 */
-  .quick-menu{bottom:20px;right:14px;gap:10px}
-  .quick-menu .float-btn{display:flex;width:58px;height:58px}
-  .float-icon{font-size:18px}
-  .float-txt{font-size:10px;margin-top:2px}
-  .top-btn{width:54px;height:54px}
-  .top-txt{font-size:10px}
+  /* 우측 플로팅: 전화상담 + 상담신청 + TOP (크게) */
+  .quick-menu{bottom:18px;right:14px;gap:12px}
+  .quick-menu .float-btn{display:flex;width:76px;height:76px}
+  .float-icon{font-size:24px}
+  .float-txt{font-size:12.5px;margin-top:3px}
+  .top-btn{width:64px;height:64px}
+  .top-arrow{font-size:20px}
+  .top-txt{font-size:11px}
   .factbar-inner{gap:14px}
   .fact{min-width:90px;flex:0 0 28%}
   .fact strong{font-size:24px}
