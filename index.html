@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=56">
+<link rel="stylesheet" href="css/style.css?v=57">
 </head>
 <body>
 <script>
@@ -61,6 +61,18 @@
   function galPick(el){
     var th=document.querySelectorAll('#gallery .gal-thumb'), i;
     for(i=0;i<th.length;i++){ if(th[i]===el){ galSet(i); return; } }
+  }
+  function openZoom(src){
+    var lb=document.getElementById('zoomLightbox'); if(!lb) return;
+    document.getElementById('zoomImg').src=src;
+    lb.classList.add('open');
+    document.body.style.overflow='hidden';
+  }
+  function closeZoom(e){
+    if(e && e.target && e.target.id==='zoomImg') return;
+    var lb=document.getElementById('zoomLightbox'); if(!lb) return;
+    lb.classList.remove('open');
+    document.body.style.overflow='';
   }
 </script>
 
@@ -357,15 +369,23 @@
 <!-- ===================== 단지배치도 ===================== -->
 <section class="section product" id="siteplan">
   <div class="container">
-    <div class="unit-head">
+    <div class="unit-head siteplan-head">
       <h2 class="unit-title">단지배치도</h2>
-      <span class="unit-sub">EXORDIUM SIGNATURE HAEUNDAE</span>
+      <button type="button" class="siteplan-zoom-btn" onclick="openZoom('images/단지배치도.png')">자세히보기
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/><path d="M11 8v6M8 11h6"/></svg>
+      </button>
     </div>
     <div class="siteplan-box">
       <img src="images/단지배치도.png" alt="단지배치도">
     </div>
   </div>
 </section>
+
+<!-- 이미지 확대 라이트박스 -->
+<div class="zoom-lightbox" id="zoomLightbox" onclick="closeZoom(event)">
+  <button type="button" class="zoom-close" aria-label="닫기" onclick="closeZoom(event)">✕</button>
+  <img id="zoomImg" src="" alt="단지배치도 확대">
+</div>
 
 <!-- ===================== WORRY-FREE (無) ===================== -->
 <section class="bk-sec point-sec" id="worryfree">
