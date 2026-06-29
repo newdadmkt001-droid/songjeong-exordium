@@ -307,10 +307,9 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
 .bk-head{max-width:600px;margin:0}
 .bk-eyebrow{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;letter-spacing:.03em;color:var(--navy);margin-bottom:16px}
 .bk-title{font-size:clamp(30px,3.6vw,46px);font-weight:800;color:var(--navy);line-height:1.25}
-.bk-bar{display:block;width:48px;height:2px;background:var(--gold);margin:26px 0}
-.bk-desc{font-size:16px;color:var(--gray);line-height:1.8}
+.bk-desc{font-size:16px;color:var(--gray);line-height:1.8;margin-top:24px}
 .bk-hero-img{position:absolute;top:0;right:0;width:56%;height:100%;z-index:1;
-  background:url('../images/main.jpg') right center/cover no-repeat}
+  background:url('../images/apt-bg3.jpg') right center/cover no-repeat}
 .bk-hero-img::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,#fff 0%,rgba(255,255,255,.55) 26%,rgba(255,255,255,0) 52%)}
 /* 하단: 네이비 + 테두리 카드 */
 .point-wrap{background:linear-gradient(160deg,#0f1622 0%,#0c1320 100%);padding:64px 0}
@@ -646,8 +645,8 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   .fp-img img{width:100%;height:auto;max-height:46vh;object-fit:contain}
   .floor-tabs{flex-wrap:wrap}
   .fp-info{padding:28px 24px}
-  /* 6번째 상단: 모바일은 이미지를 텍스트 아래로 */
-  .bk-top .container{padding:56px 0 36px}
+  /* 6번째 상단: 모바일은 이미지를 텍스트 아래로 (좌우 여백 유지) */
+  .bk-top .container{padding:56px 24px 36px}
   .bk-hero-img{position:relative;width:100%;height:240px}
   .bk-hero-img::after{background:linear-gradient(0deg,rgba(255,255,255,0) 60%,#fff 100%)}
   .point-wrap{padding:40px 0}
