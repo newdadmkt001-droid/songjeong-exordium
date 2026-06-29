@@ -339,7 +339,7 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
 .bk-feat-body p{font-size:15px;color:rgba(255,255,255,.78);line-height:1.6;margin-bottom:26px}
 .bk-arrow{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;
   border:1px solid rgba(255,255,255,.5);color:#fff;font-size:18px;transition:.2s}
-.bk-arrow:hover{background:var(--gold);border-color:var(--gold);color:#231a06}
+@media (hover:hover){.bk-arrow:hover{background:var(--gold);border-color:var(--gold);color:#231a06}}
 
 /* ============ AMENITY 슬라이더 ============ */
 .am-slider-sec .amenity-head{margin-bottom:26px}
@@ -359,7 +359,7 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
 .am-slide-panel p{font-size:23px;color:rgba(255,255,255,.85);line-height:1.6}
 .am-slide-nav{display:flex;gap:12px;margin-top:30px}
 .am-prev,.am-next{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:none;color:#fff;font-size:22px;line-height:1;cursor:pointer;transition:.2s;touch-action:manipulation;-webkit-tap-highlight-color:transparent;position:relative;z-index:5}
-.am-prev:hover,.am-next:hover{background:var(--gold);border-color:var(--gold);color:#231a06}
+@media (hover:hover){.am-prev:hover,.am-next:hover{background:var(--gold);border-color:var(--gold);color:#231a06}}
 .am-slide-count{position:absolute;right:50px;bottom:46px;font-size:18px;color:rgba(255,255,255,.5)}
 .am-slide-count b{font-size:36px;font-weight:800;color:#fff;margin-right:2px}
 
@@ -379,7 +379,7 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
 .ploc-info li::before{content:"";position:absolute;left:0;top:15px;width:6px;height:6px;border-radius:50%;background:var(--gold)}
 .ploc-arrow{position:absolute;top:34%;transform:translateY(-50%);z-index:5;width:48px;height:48px;border-radius:50%;
   background:rgba(28,41,64,.55);color:#fff;border:none;font-size:26px;cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:center}
-.ploc-arrow:hover{background:var(--gold);color:#231a06}
+@media (hover:hover){.ploc-arrow:hover{background:var(--gold);color:#231a06}}
 .ploc-arrow.prev{left:-22px}
 .ploc-arrow.next{right:-22px}
 .ploc-dots{display:flex;justify-content:center;gap:10px;margin-top:24px}
