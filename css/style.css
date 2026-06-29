@@ -129,7 +129,7 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
 /* ============ HERO ============ */
 .hero{position:relative;height:calc(100vh - 89px);height:calc(100dvh - 89px);min-height:560px;display:flex;flex-direction:column;overflow:hidden}
 .hero-main{position:relative;flex:1 1 auto;min-height:0;display:flex;align-items:center}
-.hero-bg{position:absolute;inset:0;width:100%;height:100%;background-size:cover;background-position:30% 68%;background-repeat:no-repeat;transform:scale(1.45);transform-origin:30% 68%}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;background-image:url('../images/main.jpg');background-size:cover;background-position:30% 68%;background-repeat:no-repeat;transform:scale(1.45);transform-origin:30% 68%}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(9,15,28,.82) 0%,rgba(9,15,28,.6) 24%,rgba(9,15,28,.25) 46%,rgba(9,15,28,0) 66%)}
 .hero-content{position:relative;z-index:3;color:#fff;max-width:680px;padding:0 24px;margin-left:max(24px,calc((100vw - var(--maxw))/2))}
 .hero-eyebrow{display:inline-block;font-family:'Cormorant Garamond',serif;color:#fff;font-size:28px;font-weight:600;letter-spacing:.04em;margin-bottom:22px}
@@ -671,7 +671,7 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   .hcontact-form .agree{flex:1 1 100%;justify-content:center}
   .hcontact-form .btn{flex:1 1 100%}
   /* 1번 히어로: 건물(아파트) 잘 보이게 + 영문 한 줄 */
-  .hero-bg{transform:none;background-position:50% 50%;background-size:cover;background-image:url('images/main-m.jpg')!important}
+  .hero-bg{transform:none;background-position:50% 50%;background-size:cover;background-image:url('../images/main-m.jpg')}
   .hero-eyebrow{font-size:16px;letter-spacing:.02em;white-space:nowrap;margin-bottom:14px}
   /* 2번째 섹션: 모바일은 박스 아래에 지도 사진(꽉 차게) */
   .location{background-image:none!important;background:#fff!important;padding-bottom:0}
