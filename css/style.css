@@ -575,10 +575,10 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
 .full-form .agree{margin:6px 0 18px}
 
 /* ============ FOOTER ============ */
-.site-footer{background:#080e1a;color:#8794a6;padding:54px 0;text-align:center}
-.footer-logo{font-family:'Pretendard',sans-serif;font-size:20px;letter-spacing:.16em;color:#fff;margin-bottom:14px}
+.site-footer{background:#080e1a;color:#8794a6;padding:54px 0;text-align:left}
+.footer-logo-img{display:block;height:42px;width:auto;margin-bottom:22px}
 .footer-addr{font-size:14px;margin-bottom:20px;color:#aab4c2}
-.footer-disc{font-size:12px;line-height:1.8;max-width:880px;margin:0 auto 18px;color:#6f7c8d}
+.footer-disc{font-size:12px;line-height:1.8;max-width:880px;margin:0 0 18px;color:#6f7c8d}
 .footer-copy{font-size:12px;color:#5a6675}
 
 /* ============ MOBILE CTA BAR ============ */
@@ -676,9 +676,9 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   .hcontact-form input{flex:1 1 100%}
   .hcontact-form .agree{flex:1 1 100%;justify-content:flex-start;text-align:left}
   .hcontact-form .btn{flex:1 1 100%}
-  /* 1번 히어로: 글자 상단 + 이미지 위로 */
+  /* 1번 히어로: 글자 상단 + 가운데 정렬 + 이미지 위로 */
   .hero-main{align-items:flex-start}
-  .hero-content{padding-top:24px}
+  .hero-content{padding-top:24px;text-align:center;margin-left:auto;margin-right:auto}
   .hero-bg{transform:scale(1.14);transform-origin:50% 30%;background-position:50% 30%;background-size:cover;background-image:url('../images/main-m.jpg')}
   .hero-eyebrow{font-size:16px;letter-spacing:.02em;white-space:nowrap;margin-bottom:12px}
   /* 히어로 하단 상담폼 (모바일) */
