@@ -626,8 +626,8 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   .loc3-box{max-width:none}
   .lc-name{font-size:20px}
   .lc-dist{font-size:16px}
-  .header-grand,.header-menu{display:none}
-  .header-right{margin-left:auto;margin-right:18px}
+  .header-right{margin-left:auto;gap:12px}
+  .header-grand{padding:8px 14px;font-size:12px}
   .p6-inner{grid-template-columns:1fr;gap:36px;padding:64px 24px}
   .p6-grid{grid-template-columns:repeat(2,1fr)}
   .p6-item:nth-child(3n){border-right:1px solid rgba(255,255,255,.14)}
