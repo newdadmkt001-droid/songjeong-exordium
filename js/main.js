@@ -148,7 +148,7 @@
   // 폼 제출 처리
   // ※ 실제 DB 연동: 아래 sendLead() 안에서 서버 API / 구글시트 / 메일 전송으로 교체하세요.
   // 구글 시트 연동: 아래 URL을 본인 Apps Script 웹앱 주소로 교체하세요.
-  var LEAD_ENDPOINT = 'PASTE_GOOGLE_APPS_SCRIPT_WEBAPP_URL';
+  var LEAD_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzp_Xf9p1Y4irHTW_VCSQ6p-JF3Bsyt2moOfOtDGB1m0q5tohNpHv-MvYNQmURYxej9/exec';
 
   function sendLead(data) {
     console.log('[관심고객 DB]', data);
