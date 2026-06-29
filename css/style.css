@@ -345,7 +345,7 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
 .am-slide{grid-area:1/1;display:grid;grid-template-columns:1.5fr 1fr;align-items:stretch;
   opacity:0;transition:opacity .9s cubic-bezier(.4,0,.2,1);pointer-events:none}
 .am-slide.active{opacity:1;pointer-events:auto;z-index:1}
-.am-slide-img{height:56vh;min-height:380px;border-radius:0;background-size:cover;background-position:center;background-repeat:no-repeat}
+.am-slide-img{min-height:440px;border-radius:0;background-size:cover;background-position:center;background-repeat:no-repeat}
 .am-slide-panel{position:relative;background:var(--navy);color:#fff;padding:54px 50px;display:flex;flex-direction:column;justify-content:center}
 .am-slide-ic{width:60px;height:60px;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(255,255,255,.08);margin-bottom:24px}
 .am-slide-ic svg{width:32px;height:32px}

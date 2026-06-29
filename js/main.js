@@ -9,7 +9,6 @@
       ['.hero-content > *', 130],
       ['.loc3-box', 0],
       ['.loc3-list li', 80],
-      ['.edition-sec .ed-card', 110],
       ['.am-slider-sec .eyebrow, .am-slider-sec .section-title', 110],
       ['.am-slider', 0],
       ['.product .unit-head > *', 100],
