@@ -679,7 +679,7 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   /* 1번 히어로: 글자 상단 + 가운데 정렬 + 이미지 위로 */
   .hero-main{align-items:flex-start}
   .hero-content{padding-top:24px;text-align:center;margin-left:auto;margin-right:auto}
-  .hero-bg{transform:scale(1.14);transform-origin:50% 30%;background-position:50% 30%;background-size:cover;background-image:url('../images/main-m.jpg')}
+  .hero-bg{transform:scale(1.06);transform-origin:50% 32%;background-position:50% 32%;background-size:cover;background-image:url('../images/main-m.jpg')}
   .hero-eyebrow{font-size:16px;letter-spacing:.02em;white-space:nowrap;margin-bottom:12px}
   /* 히어로 하단 상담폼 (모바일) */
   .hero-form-m{display:block;position:relative;z-index:6;margin:0 14px 16px;
@@ -757,6 +757,8 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   .pt-title{font-size:17px}
   .pt-desc{font-size:12.5px}
   /* 평면도 탭: 작은 폰에서 안 잘리게 */
+  .unit-sub{font-size:11px}
+  .bk-eyebrow{font-size:16px}
   .floor-tabs{gap:16px}
   .ftab{font-size:17px;padding-bottom:9px}
   .fp-areas2{gap:8px 18px}
