@@ -399,6 +399,8 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
 .unit-sub{font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:600;letter-spacing:.02em;color:var(--gray);white-space:nowrap}
 .unit-sub i{color:#cfcabf;margin:0 8px;font-style:normal}
 
+.siteplan-box{background:#f3efe7;border-radius:24px;padding:28px;box-shadow:0 14px 50px rgba(12,22,38,.08)}
+.siteplan-box img{display:block;width:100%;height:auto;border-radius:12px}
 .floor-viewer{position:relative}
 .floor-panel{display:none;grid-template-columns:1.12fr minmax(0,1fr);align-items:stretch;min-width:0;
   background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 14px 50px rgba(12,22,38,.08);
