@@ -669,9 +669,10 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   .invest-grid{grid-template-columns:1fr}
   /* 상담+푸터: 모바일은 100vh 강제 해제 + 위아래 여백 */
   .last-screen{height:auto}
-  .contact{padding:56px 0}
-  .contact-wrap{grid-template-columns:1fr;gap:28px;text-align:center}
+  .contact{padding:44px 0}
+  .contact-wrap{grid-template-columns:1fr;gap:18px;text-align:center}
   .contact-left{text-align:center}
+  .contact-lead{margin-top:8px;font-size:15px}
   .hcontact-form{flex-wrap:wrap}
   .hcontact-form{align-items:flex-start}
   .hcontact-form input{flex:1 1 100%}
