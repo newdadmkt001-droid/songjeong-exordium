@@ -342,7 +342,7 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
 .am-disclaimer{position:absolute;left:24px;bottom:28px;z-index:3;font-size:14px;line-height:1.4;color:rgba(255,255,255,.9);text-shadow:0 1px 4px rgba(0,0,0,.6);margin:0;max-width:60%}
 .am-track{display:grid}
 .am-slide{grid-area:1/1;display:grid;grid-template-columns:1.5fr 1fr;align-items:stretch;
-  opacity:0;transition:opacity .6s ease;pointer-events:none}
+  opacity:0;transition:opacity .9s cubic-bezier(.4,0,.2,1);pointer-events:none}
 .am-slide.active{opacity:1;pointer-events:auto;z-index:1}
 .am-slide-img{height:56vh;min-height:380px;border-radius:0;background-size:cover;background-position:center;background-repeat:no-repeat}
 .am-slide-panel{position:relative;background:var(--navy);color:#fff;padding:54px 50px;display:flex;flex-direction:column;justify-content:center}
@@ -658,11 +658,23 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   .hcontact-form input{flex:1 1 100%}
   .hcontact-form .agree{flex:1 1 100%;justify-content:center}
   .hcontact-form .btn{flex:1 1 100%}
-  /* 2번째 섹션: 모바일은 박스 아래에 지도 사진 */
+  /* 1번 히어로: 건물 잘 보이게 + 영문 한 줄 */
+  .hero-bg{transform:scale(1.12);transform-origin:center;background-position:70% 56%}
+  .hero-eyebrow{font-size:16px;letter-spacing:.02em;white-space:nowrap;margin-bottom:14px}
+  /* 2번째 섹션: 모바일은 박스 아래에 지도 사진(꽉 차게) */
   .location{background-image:none!important;background:#fff!important}
   .location::before{display:none}
   .loc3-box{box-shadow:0 16px 40px rgba(12,22,38,.12)}
-  .loc-map-m{display:block;width:100%;height:auto;border-radius:14px;margin-top:22px}
+  .loc-map-m{display:block;width:calc(100% + 48px);max-width:none;height:auto;margin:22px -24px 0;border-radius:0}
+  /* 3번 카드 섹션: 크기·제목·설명 축소 */
+  .ed-card-title{font-size:24px;margin-bottom:14px}
+  .ed-card-desc{font-size:14px;line-height:1.55}
+  /* 4번 어메니티: 네이비 패널 하단 모서리 둥글게 + 카드형 */
+  .am-slider{overflow:visible;border-radius:0}
+  .am-slide-img{border-radius:14px 14px 0 0}
+  .am-slide-panel{border-radius:0 0 14px 14px}
+  /* 6번 섹션: 설명을 제목 아래로(세로 정렬) */
+  .bk-head{grid-template-columns:1fr;gap:16px;margin-bottom:40px}
   .price-vs{transform:rotate(90deg)}
   .mobile-cta-bar{display:flex}
   /* 하단 고정 바가 상담 CTA를 대신하므로 우측 플로팅 상담버튼 숨김(콘텐츠 가림 방지) */
