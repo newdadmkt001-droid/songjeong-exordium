@@ -312,7 +312,7 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
 .bk-hero-img{display:none}
 /* 하단: 네이비 + 테두리 카드 */
 .point-wrap{background:linear-gradient(160deg,#0f1622 0%,#0c1320 100%);padding:64px 0}
-.point-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.point-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:1000px;margin:0 auto;padding:0 24px}
 .point-card{display:block;background:rgba(255,255,255,.03);border:1px solid rgba(198,160,88,.22);border-radius:14px;padding:26px 24px;transition:.25s}
 .point-card:hover{border-color:rgba(198,160,88,.55);background:rgba(255,255,255,.06)}
 .pt-no{display:block;font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--gold-l);margin-bottom:20px}
