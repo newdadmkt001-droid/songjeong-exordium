@@ -96,6 +96,10 @@
     try{ hide = localStorage.getItem('popupHideDate')===new Date().toDateString(); }catch(e){}
     if(!hide) p.classList.add('show');
   })();
+  // 조감도 갤러리 자동재생 (계속 루프)
+  setInterval(function(){
+    if(document.querySelectorAll('#gallery .gal-thumb').length){ galMove(1); }
+  }, 3000);
 </script>
 
 <!-- ===================== HEADER ===================== -->
