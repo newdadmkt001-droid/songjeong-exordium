@@ -118,6 +118,25 @@
     });
   }
 
+  // 조감도 갤러리
+  var gallery = document.getElementById('gallery');
+  if (gallery) {
+    var galMain = document.getElementById('galMain');
+    var thumbs = [].slice.call(gallery.querySelectorAll('.gal-thumb'));
+    var gIdx = 0;
+    function galShow(i) {
+      gIdx = (i + thumbs.length) % thumbs.length;
+      galMain.src = thumbs[gIdx].getAttribute('data-src');
+      thumbs.forEach(function (t, k) { t.classList.toggle('active', k === gIdx); });
+    }
+    gallery.addEventListener('click', function (e) {
+      var th = e.target.closest('.gal-thumb');
+      if (th) { galShow(thumbs.indexOf(th)); return; }
+      if (e.target.closest('.gal-prev')) galShow(gIdx - 1);
+      else if (e.target.closest('.gal-next')) galShow(gIdx + 1);
+    });
+  }
+
   // AMENITY 슬라이더 (여러 개 지원)
   document.querySelectorAll('.am-slider').forEach(function (amSlider) {
     var amSlides = amSlider.querySelectorAll('.am-slide');
