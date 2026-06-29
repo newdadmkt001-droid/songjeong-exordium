@@ -312,7 +312,7 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
 .bk-hero-img{display:none}
 /* 하단: 네이비 + 테두리 카드 */
 .point-wrap{background:linear-gradient(160deg,#0f1622 0%,#0c1320 100%);padding:64px 0}
-.point-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:1000px;margin:0 auto;padding:0 24px}
+.point-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:var(--maxw);margin:0 auto;padding:0 24px}
 .point-card{display:block;background:rgba(255,255,255,.03);border:1px solid rgba(198,160,88,.22);border-radius:14px;padding:26px 24px;transition:.25s}
 .point-card:hover{border-color:rgba(198,160,88,.55);background:rgba(255,255,255,.06)}
 .pt-no{display:block;font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--gold-l);margin-bottom:20px}
@@ -727,13 +727,14 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   .header-tel{font-size:18px}
   .header-tel .tel-ico{width:18px;height:18px}
   .logo img{height:46px}
-  .point-grid{grid-template-columns:1fr;gap:12px}
-  .point-card{padding:20px 18px}
-  .pt-no{margin-bottom:14px;font-size:12px}
-  .pt-ic{flex:0 0 48px;width:48px;height:48px}
-  .pt-ic svg{width:24px;height:24px}
-  .pt-title{font-size:19px}
-  .pt-desc{font-size:13px}
+  .point-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .point-card{padding:18px 12px}
+  .pt-no{margin-bottom:12px;font-size:11px}
+  .pt-row{flex-direction:column;align-items:flex-start;gap:12px}
+  .pt-ic{flex:0 0 46px;width:46px;height:46px}
+  .pt-ic svg{width:23px;height:23px}
+  .pt-title{font-size:17px}
+  .pt-desc{font-size:12.5px}
   /* 평면도 탭: 작은 폰에서 안 잘리게 */
   .floor-tabs{gap:16px}
   .ftab{font-size:17px;padding-bottom:9px}
