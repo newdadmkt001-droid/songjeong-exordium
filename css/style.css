@@ -88,7 +88,7 @@ em{font-style:normal}
 .header-menu .hm-dots{display:inline-flex;flex-direction:column;gap:3px}
 .header-menu .hm-dots i{width:4px;height:4px;border-radius:50%;background:var(--navy)}
 .header-tel{display:flex;align-items:center;gap:8px;color:#1c2940;font-size:25px;font-weight:800;letter-spacing:.02em}
-.header-tel .tel-ico{font-size:19px}
+.header-tel .tel-ico{width:24px;height:24px;object-fit:contain;display:block}
 .header-tel:hover{color:var(--gold)}
 .logo{display:flex;align-items:center}
 .logo img{height:56px;width:auto;display:block}
@@ -717,7 +717,7 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   .lc-ic{flex:0 0 38px;height:38px}
   /* 헤더 전화번호 넘침 방지 */
   .header-tel{font-size:18px}
-  .header-tel .tel-ico{font-size:15px}
+  .header-tel .tel-ico{width:18px;height:18px}
   .logo img{height:46px}
   .point-grid{grid-template-columns:repeat(2,1fr)}
   .point-card{min-height:200px;padding:32px 14px}
