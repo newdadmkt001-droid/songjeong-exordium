@@ -774,6 +774,7 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   /* 평면도 탭: 작은 폰에서 안 잘리게 */
   .unit-sub{font-size:11px}
   .bk-eyebrow{font-size:16px}
+  .siteplan-box{padding:10px}
   .floor-tabs{gap:16px}
   .ftab{font-size:17px;padding-bottom:9px}
   .fp-areas2{gap:8px 18px}
