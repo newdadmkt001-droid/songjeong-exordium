@@ -118,41 +118,19 @@
     });
   }
 
-  // 조감도 갤러리
-  var gallery = document.getElementById('gallery');
-  if (gallery) {
-    var galMain = document.getElementById('galMain');
-    var thumbs = [].slice.call(gallery.querySelectorAll('.gal-thumb'));
-    var gIdx = 0;
-    function galShow(i) {
-      gIdx = (i + thumbs.length) % thumbs.length;
-      galMain.src = thumbs[gIdx].getAttribute('data-src');
-      thumbs.forEach(function (t, k) { t.classList.toggle('active', k === gIdx); });
-    }
-    gallery.addEventListener('click', function (e) {
-      var th = e.target.closest('.gal-thumb');
-      if (th) { galShow(thumbs.indexOf(th)); return; }
-      if (e.target.closest('.gal-prev')) galShow(gIdx - 1);
-      else if (e.target.closest('.gal-next')) galShow(gIdx + 1);
-    });
-  }
-
-  // AMENITY 슬라이더 (여러 개 지원)
+  // AMENITY 슬라이더 자동재생/스와이프 (화살표는 인라인 amMove 사용)
   document.querySelectorAll('.am-slider').forEach(function (amSlider) {
     var amSlides = amSlider.querySelectorAll('.am-slide');
     if (!amSlides.length) return;
-    var amN = amSlides.length, amIdx = 0;
+    var amN = amSlides.length;
+    function curIdx() { for (var k = 0; k < amN; k++) { if (amSlides[k].classList.contains('active')) return k; } return 0; }
     function amShow(i) {
-      amIdx = (i + amN) % amN;
-      amSlides.forEach(function (s, k) { s.classList.toggle('active', k === amIdx); });
+      i = (i + amN) % amN;
+      amSlides.forEach(function (s, k) { s.classList.toggle('active', k === i); });
     }
     var amTimer;
-    function amStart() { amTimer = setInterval(function () { amShow(amIdx + 1); }, 2800); }
+    function amStart() { amTimer = setInterval(function () { amShow(curIdx() + 1); }, 2800); }
     function amReset() { clearInterval(amTimer); amStart(); }
-    amSlider.addEventListener('click', function (e) {
-      if (e.target.closest('.am-prev')) { amShow(amIdx - 1); amReset(); }
-      else if (e.target.closest('.am-next')) { amShow(amIdx + 1); amReset(); }
-    });
     amSlider.addEventListener('mouseenter', function () { clearInterval(amTimer); });
     amSlider.addEventListener('mouseleave', amStart);
     // 모바일 터치 스와이프
@@ -166,7 +144,7 @@
       var dx = e.changedTouches[0].clientX - tStartX;
       var dy = e.changedTouches[0].clientY - tStartY;
       if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
-        if (dx < 0) amShow(amIdx + 1); else amShow(amIdx - 1);
+        amShow(curIdx() + (dx < 0 ? 1 : -1));
       }
       tStartX = null; amReset();
     }, { passive: true });
