@@ -746,11 +746,12 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   .header-tel .tel-ico{width:18px;height:18px}
   .logo img{height:46px}
   .point-grid{grid-template-columns:repeat(2,1fr);gap:10px}
-  .point-card{padding:18px 12px}
+  .point-card{padding:18px 12px;text-align:center}
   .pt-no{margin-bottom:12px;font-size:11px}
-  .pt-row{flex-direction:column;align-items:flex-start;gap:12px}
+  .pt-row{flex-direction:column;align-items:center;gap:12px}
   .pt-ic{flex:0 0 46px;width:46px;height:46px}
   .pt-ic svg{width:23px;height:23px}
+  .pt-tx{width:100%}
   .pt-title{font-size:17px}
   .pt-desc{font-size:12.5px}
   /* 평면도 탭: 작은 폰에서 안 잘리게 */
