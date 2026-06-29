@@ -191,8 +191,8 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
 .ed-card::after{content:"";position:absolute;inset:0;z-index:0;transition:background .4s}
 .ed-card:hover::after{background:rgba(0,0,0,.18)}
 .ed-card-body{position:relative;z-index:1;padding:0 38px 62px;color:#fff;width:100%}
-.ed-badge{display:inline-block;font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:700;letter-spacing:.02em;
-  color:var(--navy);background:#fff;padding:8px 18px;border-radius:50px;margin-bottom:26px}
+.ed-badge{display:inline-block;font-family:'Cormorant Garamond',serif;font-size:13px;font-weight:700;letter-spacing:.02em;
+  color:var(--navy);background:#fff;padding:6px 14px;border-radius:50px;margin-bottom:24px}
 .ed-card-title{font-family:'Pretendard',sans-serif;font-size:clamp(30px,2.6vw,42px);font-weight:800;color:#fff;line-height:1.18;margin-bottom:22px;letter-spacing:-.01em}
 .ed-card-desc{font-size:17.5px;color:rgba(255,255,255,.85);line-height:1.65}
 
