@@ -671,7 +671,7 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   .hcontact-form .agree{flex:1 1 100%;justify-content:center}
   .hcontact-form .btn{flex:1 1 100%}
   /* 1번 히어로: 건물(아파트) 잘 보이게 + 영문 한 줄 */
-  .hero-bg{transform:none;background-position:62% 42%;background-size:cover}
+  .hero-bg{transform:none;background-position:58% 60%;background-size:cover}
   .hero-eyebrow{font-size:16px;letter-spacing:.02em;white-space:nowrap;margin-bottom:14px}
   /* 2번째 섹션: 모바일은 박스 아래에 지도 사진(꽉 차게) */
   .location{background-image:none!important;background:#fff!important;padding-bottom:0}
