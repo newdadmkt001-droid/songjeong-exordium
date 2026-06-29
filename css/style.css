@@ -638,9 +638,10 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   .intro-grid{grid-template-columns:1fr}
   .hf-item{flex:0 0 100%;border-right:none}
   .floor-panel{grid-template-columns:1fr}
-  .fp-info{padding:34px 28px}
-  .floor-tabs{gap:26px}
-  .ftab{font-size:23px}
+  .fp-img{margin:12px;padding:14px;max-height:none}
+  .fp-info{padding:28px 24px}
+  .floor-tabs{gap:22px}
+  .ftab{font-size:20px;padding-bottom:10px}
   .ploc-info{flex-direction:column;gap:16px;align-items:flex-start}
   .ploc-arrow.prev{left:4px}
   .ploc-arrow.next{right:4px}
@@ -664,10 +665,11 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   .loc-map-m{display:block;width:100%;height:auto;border-radius:14px;margin-top:22px}
   .price-vs{transform:rotate(90deg)}
   .mobile-cta-bar{display:flex}
-  .quick-menu{bottom:78px;right:16px;gap:10px}
-  .float-btn,.top-btn{width:68px;height:68px}
-  .float-icon{font-size:21px}
-  .float-txt,.top-txt{font-size:12px}
+  /* 하단 고정 바가 상담 CTA를 대신하므로 우측 플로팅 상담버튼 숨김(콘텐츠 가림 방지) */
+  .quick-menu{bottom:74px;right:14px;gap:10px}
+  .quick-menu .float-btn{display:none}
+  .top-btn{width:54px;height:54px}
+  .top-txt{font-size:10px}
   .factbar-inner{gap:14px}
   .fact{min-width:90px;flex:0 0 28%}
   .fact strong{font-size:24px}
@@ -693,6 +695,11 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   .header-tel .tel-ico{font-size:15px}
   .logo img{height:46px}
   .point-grid{grid-template-columns:1fr}
+  /* 평면도 탭: 작은 폰에서 안 잘리게 */
+  .floor-tabs{gap:16px}
+  .ftab{font-size:17px;padding-bottom:9px}
+  .fp-areas2{gap:8px 18px}
+  .fp-areas2 span{font-size:14px}
   .csr-cards{grid-template-columns:1fr}
   .csr-feature{min-height:340px}
   .p6-grid{grid-template-columns:1fr}
