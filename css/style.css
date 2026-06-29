@@ -345,7 +345,7 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
 .am-slider-sec .amenity-head{margin-bottom:26px}
 .am-slider-sec .amenity-head .section-title{text-align:left}
 .am-slider{position:relative;overflow:hidden;border-radius:18px}
-.am-disclaimer{position:absolute;left:24px;bottom:28px;z-index:3;font-size:14px;line-height:1.4;color:rgba(255,255,255,.9);text-shadow:0 1px 4px rgba(0,0,0,.6);margin:0;max-width:60%}
+.am-disclaimer{position:absolute;left:24px;bottom:28px;z-index:3;font-size:14px;line-height:1.4;color:rgba(255,255,255,.9);text-shadow:0 1px 4px rgba(0,0,0,.6);margin:0;max-width:60%;pointer-events:none}
 .am-track{display:grid}
 .am-slide{grid-area:1/1;display:grid;grid-template-columns:1.5fr 1fr;align-items:stretch;
   opacity:0;transition:opacity .9s cubic-bezier(.4,0,.2,1);pointer-events:none}
