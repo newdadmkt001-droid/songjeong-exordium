@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=59">
+<link rel="stylesheet" href="css/style.css?v=60">
 </head>
 <body>
 <script>
@@ -74,6 +74,28 @@
     lb.classList.remove('open');
     document.body.style.overflow='';
   }
+  function closePopup(){ var p=document.getElementById('sitePopup'); if(p) p.classList.remove('show'); }
+  function closePopupToday(){ try{ localStorage.setItem('popupHideDate', new Date().toDateString()); }catch(e){} closePopup(); }
+</script>
+
+<!-- ===================== 진입 팝업 ===================== -->
+<div class="site-popup" id="sitePopup">
+  <div class="popup-inner">
+    <a href="tel:1533-8429" class="popup-img-link"><img src="images/팝업.png" alt="송정 엑소디움 전화상담"></a>
+    <button type="button" class="popup-x" onclick="closePopup()" aria-label="닫기">✕</button>
+    <div class="popup-bar">
+      <button type="button" class="popup-today" onclick="closePopupToday()">오늘 하루 보지 않기</button>
+      <button type="button" class="popup-close" onclick="closePopup()">닫기</button>
+    </div>
+  </div>
+</div>
+<script>
+  (function(){
+    var p=document.getElementById('sitePopup'); if(!p) return;
+    var hide=false;
+    try{ hide = localStorage.getItem('popupHideDate')===new Date().toDateString(); }catch(e){}
+    if(!hide) p.classList.add('show');
+  })();
 </script>
 
 <!-- ===================== HEADER ===================== -->
