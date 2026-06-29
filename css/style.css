@@ -681,7 +681,7 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   .hero-main{align-items:flex-start}
   .hero-content{padding-top:54px;text-align:center;margin-left:auto;margin-right:auto;
     text-shadow:0 2px 14px rgba(0,0,0,.45)}
-  .hero-bg{transform:scale(1.18);transform-origin:50% 62%;background-position:50% 62%;background-size:cover;background-image:url('../images/main-m.jpg')}
+  .hero-bg{transform:none;background-position:50% 42%;background-size:cover;background-image:url('../images/main-m.jpg')}
   .hero-eyebrow{font-size:16px;letter-spacing:.02em;white-space:nowrap;margin-bottom:12px}
   /* 히어로 하단 상담폼 (모바일) */
   .hero-form-m{display:block;position:relative;z-index:6;margin:0 14px 16px;
