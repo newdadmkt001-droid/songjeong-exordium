@@ -690,19 +690,22 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
 @media(max-width:560px){
   .edition-sec{grid-template-columns:1fr}
   .ed-card{min-height:260px}
-  .ed-card-body{padding:0 22px 28px}
-  .ed-card-title{font-size:22px;margin-bottom:10px}
-  .ed-card-desc{font-size:13.5px}
+  .ed-card-body{padding:0 24px 30px}
+  .ed-badge{font-size:13px;padding:6px 14px;margin-bottom:14px}
+  .ed-card-title{font-size:28px;margin-bottom:12px}
+  .ed-card-desc{font-size:14px;line-height:1.5}
+  /* 어메니티: 이미지 위 고지문 + 카운터를 버튼 줄에 */
   .am-slide-img{height:240px;min-height:0}
-  .am-slide-panel{padding:30px 22px}
+  .am-slide-panel{padding:28px 22px 30px}
   .am-slide-panel p{font-size:16px}
   .am-slide-en{font-size:20px}
   .am-slide-ic{width:48px;height:48px;margin-bottom:16px}
   .am-slide-panel h3{font-size:28px;margin-bottom:14px}
-  .am-slide-nav{margin-top:20px}
-  .am-slide-count{position:static;text-align:right;margin-top:12px}
+  .am-slide-nav{margin-top:18px}
+  .am-slide-count{position:absolute;right:22px;bottom:30px;margin:0;text-align:right}
   .am-slide-count b{font-size:28px}
-  .am-disclaimer{position:static;max-width:none;margin:14px 24px 0;color:var(--gray);text-shadow:none}
+  .am-disclaimer{position:absolute;left:16px;right:16px;top:228px;transform:translateY(-100%);margin:0;
+    color:#fff;font-size:11px;line-height:1.4;text-shadow:0 1px 5px rgba(0,0,0,.75);text-align:left;max-width:none}
   .lc-name{font-size:17px}
   .lc-dist{font-size:14px}
   .lc-ic{flex:0 0 38px;height:38px}
