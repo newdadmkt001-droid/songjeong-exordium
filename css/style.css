@@ -718,7 +718,7 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   .invest-grid{grid-template-columns:1fr}
   /* 상담+푸터: 모바일은 100vh 강제 해제 + 위아래 여백 */
   .last-screen{height:auto}
-  .contact{padding:64px 0 0}
+  .contact{padding:64px 0}
   .contact-wrap{grid-template-columns:1fr;gap:18px;text-align:center}
   .contact-left{text-align:center}
   .contact-lead{margin-top:2px;font-size:14px}
