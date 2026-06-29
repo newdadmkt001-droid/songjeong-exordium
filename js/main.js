@@ -1,9 +1,10 @@
 (function () {
   'use strict';
 
-  // 스크롤 등장 애니메이션 (fade + slide-up, 그룹별 stagger)
+  // 스크롤 등장 애니메이션 (fade + slide-up, 그룹별 stagger) — 모바일은 끔(버벅임 방지)
   (function () {
     if (!('IntersectionObserver' in window)) return;
+    if (window.matchMedia('(max-width:1024px)').matches) return;
     var groups = [
       ['.hero-content > *', 130],
       ['.loc3-box', 0],

@@ -642,9 +642,13 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   .intro-grid{grid-template-columns:1fr}
   .hf-item{flex:0 0 100%;border-right:none}
   .floor-panel{grid-template-columns:minmax(0,1fr)}
-  .fp-img{margin:12px;padding:14px;max-height:none;aspect-ratio:16/12}
+  .fp-img{margin:12px;padding:12px;aspect-ratio:auto;max-height:none;height:auto;display:block}
+  .fp-img img{width:100%;height:auto;max-height:46vh;object-fit:contain}
   .floor-tabs{flex-wrap:wrap}
   .fp-info{padding:28px 24px}
+  /* 모바일: 무거운 blur 제거(스크롤 버벅임 방지) */
+  .point-grid::before{filter:brightness(.5);transform:none}
+  .reveal{opacity:1!important;transform:none!important;transition:none!important;will-change:auto!important}
   .floor-tabs{gap:22px}
   .ftab{font-size:20px;padding-bottom:10px}
   .ploc-info{flex-direction:column;gap:16px;align-items:flex-start}
