@@ -551,10 +551,11 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
 .contact-lead{font-size:19px;color:var(--gray);margin-top:14px;line-height:1.7}
 .hcontact-form{display:flex;align-items:center;gap:12px;flex-wrap:wrap;
   background:#f6f4ef;border:1px solid var(--line);border-radius:16px;padding:24px 26px}
-.hcontact-form input{flex:1;min-width:150px;padding:15px 16px;border:1px solid var(--line);border-radius:8px;
+.hcontact-form input[type="text"],.hcontact-form input[type="tel"]{flex:1;min-width:150px;padding:15px 16px;border:1px solid var(--line);border-radius:8px;
   font-size:16px;font-family:inherit;background:#fff}
 .hcontact-form input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(198,160,88,.15)}
-.hcontact-form .agree{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--gray);white-space:nowrap;margin:0;flex:0 0 auto}
+.hcontact-form .agree{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;color:var(--gray);white-space:nowrap;margin:0;flex:0 0 auto}
+.hcontact-form .agree input[type="checkbox"]{flex:0 0 auto;min-width:0;width:17px;height:17px;margin:0;padding:0}
 .hcontact-form .btn{flex:0 0 auto;white-space:nowrap;padding:15px 28px}
 .contact-points{list-style:none;margin-bottom:30px}
 .contact-points li{padding:9px 0 9px 28px;position:relative;font-size:18px;color:var(--ink)}
