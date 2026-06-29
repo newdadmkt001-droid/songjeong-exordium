@@ -389,9 +389,9 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
 .type-table tbody tr:nth-child(even){background:#f5f3ee}
 .type-table td:first-child{font-weight:700;color:var(--navy)}
 /* 평면: Unit (좌 이미지 + 우 정보) */
-.unit-head{display:flex;align-items:baseline;gap:18px;margin-bottom:26px;flex-wrap:wrap}
-.unit-title{font-size:clamp(30px,4vw,48px);font-weight:800;color:var(--navy);line-height:1;letter-spacing:-.01em}
-.unit-sub{font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:600;letter-spacing:.03em;color:var(--navy)}
+.unit-head{display:flex;align-items:baseline;gap:14px;margin-bottom:26px;flex-wrap:nowrap}
+.unit-title{font-size:clamp(30px,4vw,48px);font-weight:800;color:var(--navy);line-height:1;letter-spacing:-.01em;flex:0 0 auto}
+.unit-sub{font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:600;letter-spacing:.02em;color:var(--gray);white-space:nowrap}
 .unit-sub i{color:#cfcabf;margin:0 8px;font-style:normal}
 
 .floor-viewer{display:grid;grid-template-columns:minmax(0,1fr)}
