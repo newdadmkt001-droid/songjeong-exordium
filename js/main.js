@@ -134,6 +134,21 @@
     amSlider.querySelectorAll('.am-next').forEach(function (b) { b.addEventListener('click', function () { amShow(amIdx + 1); amReset(); }); });
     amSlider.addEventListener('mouseenter', function () { clearInterval(amTimer); });
     amSlider.addEventListener('mouseleave', amStart);
+    // 모바일 터치 스와이프
+    var tStartX = null, tStartY = null;
+    amSlider.addEventListener('touchstart', function (e) {
+      tStartX = e.changedTouches[0].clientX; tStartY = e.changedTouches[0].clientY;
+      clearInterval(amTimer);
+    }, { passive: true });
+    amSlider.addEventListener('touchend', function (e) {
+      if (tStartX === null) return;
+      var dx = e.changedTouches[0].clientX - tStartX;
+      var dy = e.changedTouches[0].clientY - tStartY;
+      if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
+        if (dx < 0) amShow(amIdx + 1); else amShow(amIdx - 1);
+      }
+      tStartX = null; amReset();
+    }, { passive: true });
     amStart();
   });
 
