@@ -690,10 +690,13 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   /* 6번 섹션: 설명을 제목 아래로(세로 정렬) */
   .bk-head{grid-template-columns:1fr;gap:16px;margin-bottom:40px}
   .price-vs{transform:rotate(90deg)}
-  .mobile-cta-bar{display:flex}
-  /* 하단 고정 바가 상담 CTA를 대신하므로 우측 플로팅 상담버튼 숨김(콘텐츠 가림 방지) */
-  .quick-menu{bottom:74px;right:14px;gap:10px}
-  .quick-menu .float-btn{display:none}
+  /* 하단 고정 바(전화상담/관심고객등록) 제거 */
+  .mobile-cta-bar{display:none}
+  /* 우측 플로팅: 상담신청 + TOP 유지 */
+  .quick-menu{bottom:20px;right:14px;gap:10px}
+  .quick-menu .float-btn{display:flex;width:58px;height:58px}
+  .float-icon{font-size:18px}
+  .float-txt{font-size:10px;margin-top:2px}
   .top-btn{width:54px;height:54px}
   .top-txt{font-size:10px}
   .factbar-inner{gap:14px}
