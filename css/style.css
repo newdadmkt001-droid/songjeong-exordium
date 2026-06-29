@@ -11,7 +11,8 @@
   --bg:#ffffff;
   --maxw:1440px;
 }
-html{scroll-behavior:smooth;scroll-padding-top:89px}
+html{scroll-behavior:smooth;scroll-padding-top:89px;overflow-x:clip}
+body{overflow-x:clip}
 [id]{scroll-margin-top:89px}
 .hero{scroll-snap-align:start}
 body{
@@ -618,7 +619,8 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   .ed-card{min-height:420px}
   .ed-card-body{padding:0 26px 40px}
   .point-grid{grid-template-columns:repeat(2,1fr)}
-  .am-slide.active{grid-template-columns:1fr}
+  .am-slide{grid-template-columns:minmax(0,1fr);min-width:0}
+  .am-slide-img,.am-slide-panel{min-width:0}
   .am-slide-panel{padding:34px 28px}
   .am-slide-count{position:static;text-align:right;margin-top:12px}
   .am-disclaimer{position:static;max-width:none;margin:14px 0 0;color:var(--gray);text-shadow:none}
@@ -677,7 +679,8 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   .ed-card-title{font-size:24px;margin-bottom:14px}
   .ed-card-desc{font-size:14px;line-height:1.55}
   /* 4번 어메니티: 네이비 패널 하단 모서리 둥글게 + 카드형 */
-  .am-slider{overflow:visible;border-radius:0}
+  .am-slider{overflow:hidden;border-radius:14px}
+  .am-slider-sec{overflow-x:hidden}
   .am-slide-img{border-radius:14px 14px 0 0}
   .am-slide-panel{border-radius:0 0 14px 14px}
   /* 6번 섹션: 설명을 제목 아래로(세로 정렬) */
