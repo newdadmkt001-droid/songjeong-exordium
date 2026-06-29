@@ -136,6 +136,7 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
 .hero-title{font-family:'Pretendard',sans-serif;font-weight:800;margin-bottom:0;color:#fff;letter-spacing:-.01em;word-break:keep-all}
 .hero-title .ht-sm{display:block;font-size:clamp(22px,2.3vw,32px);font-weight:600;color:rgba(255,255,255,.92);margin-bottom:14px}
 .hero-title .ht-lg{display:block;font-size:clamp(44px,5.8vw,80px);line-height:1.1}
+.hero-form-m{display:none}
 .hero-scroll{display:inline-flex;flex-direction:row-reverse;align-items:center;gap:16px;margin-top:42px;text-decoration:none}
 .hs-text{font-family:'Cormorant Garamond',serif;font-size:16px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.85);animation:hsFade 2s ease-in-out infinite}
 .hs-mouse{position:relative;width:26px;height:42px;border:2px solid rgba(255,255,255,.7);border-radius:14px}
@@ -676,6 +677,21 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   /* 1번 히어로: 건물(아파트) 잘 보이게 + 영문 한 줄 */
   .hero-bg{transform:none;background-position:50% 50%;background-size:cover;background-image:url('../images/main-m.jpg')}
   .hero-eyebrow{font-size:16px;letter-spacing:.02em;white-space:nowrap;margin-bottom:14px}
+  /* 히어로 하단 상담폼 (모바일) */
+  .hero-form-m{display:block;position:relative;z-index:6;margin:0 14px 16px;
+    background:rgba(11,17,28,.86);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+    border:1px solid rgba(198,160,88,.4);border-radius:16px;padding:16px 16px 14px;
+    box-shadow:0 14px 36px rgba(0,0,0,.45)}
+  .hfm-title{font-size:15px;font-weight:800;color:#fff;text-align:center;margin-bottom:12px;letter-spacing:.02em}
+  .hfm-title::before,.hfm-title::after{content:"";display:inline-block;width:18px;height:1px;background:var(--gold-l);vertical-align:middle;margin:0 8px}
+  .hero-form-m form{display:flex;flex-direction:column;gap:9px}
+  .hfm-row{display:flex;gap:9px}
+  .hfm-row input{flex:1;min-width:0;padding:13px 13px;border-radius:9px;border:1px solid rgba(255,255,255,.25);
+    background:#fff;font-size:15px;font-family:inherit}
+  .hfm-btn{width:100%;padding:15px;font-size:17px;border-radius:9px}
+  .hfm-agree{display:flex;align-items:center;justify-content:center;gap:7px;font-size:12px;color:rgba(255,255,255,.8)}
+  .hfm-agree input{width:15px;height:15px}
+  .hero-scroll{display:none}
   /* 2번째 섹션: 모바일은 박스 아래에 지도 사진(꽉 차게) */
   .location{background-image:none!important;background:#fff!important;padding-bottom:0}
   .location::before{display:none}
