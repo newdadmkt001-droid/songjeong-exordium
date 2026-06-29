@@ -357,7 +357,7 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
 .am-slide-panel h3{font-size:clamp(32px,3vw,46px);font-weight:800;color:var(--gold-l);margin-bottom:22px}
 .am-slide-panel p{font-size:23px;color:rgba(255,255,255,.85);line-height:1.6}
 .am-slide-nav{display:flex;gap:12px;margin-top:30px}
-.am-prev,.am-next{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:none;color:#fff;font-size:22px;line-height:1;cursor:pointer;transition:.2s}
+.am-prev,.am-next{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:none;color:#fff;font-size:22px;line-height:1;cursor:pointer;transition:.2s;touch-action:manipulation;-webkit-tap-highlight-color:transparent;position:relative;z-index:5}
 .am-prev:hover,.am-next:hover{background:var(--gold);border-color:var(--gold);color:#231a06}
 .am-slide-count{position:absolute;right:50px;bottom:46px;font-size:18px;color:rgba(255,255,255,.5)}
 .am-slide-count b{font-size:36px;font-weight:800;color:#fff;margin-right:2px}

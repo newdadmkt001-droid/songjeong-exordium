@@ -130,8 +130,10 @@
     var amTimer;
     function amStart() { amTimer = setInterval(function () { amShow(amIdx + 1); }, 2800); }
     function amReset() { clearInterval(amTimer); amStart(); }
-    amSlider.querySelectorAll('.am-prev').forEach(function (b) { b.addEventListener('click', function () { amShow(amIdx - 1); amReset(); }); });
-    amSlider.querySelectorAll('.am-next').forEach(function (b) { b.addEventListener('click', function () { amShow(amIdx + 1); amReset(); }); });
+    amSlider.addEventListener('click', function (e) {
+      if (e.target.closest('.am-prev')) { amShow(amIdx - 1); amReset(); }
+      else if (e.target.closest('.am-next')) { amShow(amIdx + 1); amReset(); }
+    });
     amSlider.addEventListener('mouseenter', function () { clearInterval(amTimer); });
     amSlider.addEventListener('mouseleave', amStart);
     // 모바일 터치 스와이프
