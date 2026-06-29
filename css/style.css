@@ -304,13 +304,12 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
 /* 상단: 좌 텍스트 + 우 건물 이미지 */
 .bk-top{position:relative;overflow:hidden;background:#fff}
 .bk-top .container{position:relative;z-index:2;padding-top:96px;padding-bottom:96px}
-.bk-head{max-width:600px;margin:0}
+.bk-head{display:grid;grid-template-columns:1.15fr 1fr;gap:50px;align-items:end;margin:0}
 .bk-eyebrow{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;letter-spacing:.03em;color:var(--navy);margin-bottom:16px}
 .bk-title{font-size:clamp(30px,3.6vw,46px);font-weight:800;color:var(--navy);line-height:1.25}
-.bk-desc{font-size:16px;color:var(--gray);line-height:1.8;margin-top:24px}
-.bk-hero-img{position:absolute;top:0;right:0;width:56%;height:100%;z-index:1;
-  background:url('../images/apt-bg3.jpg') right center/cover no-repeat}
-.bk-hero-img::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,#fff 0%,rgba(255,255,255,.55) 26%,rgba(255,255,255,0) 52%)}
+.bk-desc{font-size:16px;color:var(--gray);line-height:1.8;margin:0}
+/* PC: 우측 건물 이미지 없음 */
+.bk-hero-img{display:none}
 /* 하단: 네이비 + 테두리 카드 */
 .point-wrap{background:linear-gradient(160deg,#0f1622 0%,#0c1320 100%);padding:64px 0}
 .point-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:var(--maxw);margin:0 auto;padding:0 24px}
@@ -645,10 +644,12 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   .fp-img img{width:100%;height:auto;max-height:46vh;object-fit:contain}
   .floor-tabs{flex-wrap:wrap}
   .fp-info{padding:28px 24px}
-  /* 6번째 상단: 모바일은 이미지를 텍스트 아래로 (좌우 여백 유지) */
-  .bk-top .container{padding:56px 24px 36px}
-  .bk-hero-img{position:relative;width:100%;height:240px}
-  .bk-hero-img::after{background:linear-gradient(0deg,rgba(255,255,255,0) 60%,#fff 100%)}
+  /* 6번째 상단: 모바일은 제목/설명 세로 + 이미지(apt-bg2) 아래로 */
+  .bk-top .container{padding:56px 24px 28px}
+  .bk-head{grid-template-columns:1fr;gap:20px}
+  .bk-hero-img{display:block;position:relative;width:100%;height:220px;
+    background:url('../images/apt-bg2.jpg') center/cover no-repeat}
+  .bk-hero-img::after{display:none}
   .point-wrap{padding:40px 0}
   .reveal{opacity:1!important;transform:none!important;transition:none!important;will-change:auto!important}
   .floor-tabs{gap:22px}
@@ -689,7 +690,6 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   .am-slider-sec{overflow-x:hidden}
   .am-slide-img{border-radius:14px 14px 0 0}
   .am-slide-panel{border-radius:0 0 14px 14px}
-  .bk-head{max-width:none}
   .price-vs{transform:rotate(90deg)}
   /* 하단 고정 바(전화상담/관심고객등록) 제거 */
   .mobile-cta-bar{display:none}
