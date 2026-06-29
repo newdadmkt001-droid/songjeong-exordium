@@ -599,6 +599,17 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
 .qm-tel+.qm-reg{border-top:1px solid rgba(255,255,255,.12)}
 .qm-reg{background:linear-gradient(135deg,var(--gold),var(--gold-l));color:#2a2008}
 .qm-item:hover{filter:brightness(1.07)}
+.quick-menu{animation:qmAttn 2.4s ease-in-out infinite}
+@keyframes qmAttn{
+  0%,100%{transform:translateY(0);box-shadow:0 14px 30px rgba(12,22,38,.3)}
+  50%{transform:translateY(-5px);box-shadow:0 18px 40px rgba(198,160,88,.55)}
+}
+.qm-reg{position:relative;overflow:hidden}
+.qm-reg::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);
+  transform:skewX(-20deg);animation:qmShine 3s ease-in-out infinite}
+@keyframes qmShine{0%{left:-60%}45%,100%{left:130%}}
+@media (prefers-reduced-motion:reduce){.quick-menu,.qm-reg::after{animation:none}}
 
 /* ============ MODAL ============ */
 .modal{position:fixed;inset:0;background:rgba(8,14,26,.7);z-index:200;display:none;align-items:center;justify-content:center;padding:24px}
