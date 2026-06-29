@@ -587,23 +587,18 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
 .mcta-tel{background:var(--navy);color:#fff}
 .mcta-reg{background:var(--gold);color:#231a06}
 
-/* ============ FLOAT BTN ============ */
-.quick-menu{position:fixed;right:26px;bottom:34px;z-index:80;display:flex;flex-direction:column;gap:14px}
-.float-btn{width:88px;height:88px;border-radius:50%;
-  background:linear-gradient(135deg,var(--gold),var(--gold-l));color:#231a06;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  box-shadow:0 10px 28px rgba(198,160,88,.5);transition:.25s;text-align:center;line-height:1.15}
-.float-btn:hover{transform:scale(1.07)}
-.float-tel{background:var(--navy);color:#fff;box-shadow:0 10px 28px rgba(12,22,38,.45)}
-.float-icon{font-size:26px}
-.float-txt{font-size:14px;font-weight:800;margin-top:3px}
-.top-btn{width:88px;height:88px;border-radius:50%;border:none;cursor:pointer;
-  background:var(--navy);color:#fff;font-family:inherit;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  box-shadow:0 10px 28px rgba(12,22,38,.35);transition:.25s;line-height:1.1}
-.top-btn:hover{transform:scale(1.07)}
-.top-arrow{font-size:24px;font-weight:700}
-.top-txt{font-size:13px;font-weight:800;letter-spacing:.06em;margin-top:2px}
+/* ============ 퀵메뉴 (둥근 사각 세로 바) ============ */
+.quick-menu{position:fixed;right:24px;bottom:28px;z-index:80;display:flex;flex-direction:column;
+  border-radius:18px;overflow:hidden;box-shadow:0 14px 36px rgba(12,22,38,.32)}
+.qm-item{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;
+  width:86px;padding:18px 8px;text-align:center;transition:.2s}
+.qm-ic{display:flex;align-items:center;justify-content:center}
+.qm-ic svg{width:26px;height:26px}
+.qm-tx{font-size:13px;font-weight:700;letter-spacing:.01em;line-height:1}
+.qm-tel{background:var(--navy);color:#fff}
+.qm-tel+.qm-reg{border-top:1px solid rgba(255,255,255,.12)}
+.qm-reg{background:linear-gradient(135deg,var(--gold),var(--gold-l));color:#2a2008}
+.qm-item:hover{filter:brightness(1.07)}
 
 /* ============ MODAL ============ */
 .modal{position:fixed;inset:0;background:rgba(8,14,26,.7);z-index:200;display:none;align-items:center;justify-content:center;padding:24px}
@@ -699,14 +694,9 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   .price-vs{transform:rotate(90deg)}
   /* 하단 고정 바(전화상담/관심고객등록) 제거 */
   .mobile-cta-bar{display:none}
-  /* 우측 플로팅: 전화상담 + 상담신청 + TOP (크게) */
-  .quick-menu{bottom:18px;right:14px;gap:12px}
-  .quick-menu .float-btn{display:flex;width:76px;height:76px}
-  .float-icon{font-size:24px}
-  .float-txt{font-size:12.5px;margin-top:3px}
-  .top-btn{width:64px;height:64px}
-  .top-arrow{font-size:20px}
-  .top-txt{font-size:11px}
+  /* 우측 플로팅 퀵메뉴 */
+  .quick-menu{bottom:16px;right:14px}
+  .qm-item{width:80px;padding:16px 8px}
   .factbar-inner{gap:14px}
   .fact{min-width:90px;flex:0 0 28%}
   .fact strong{font-size:24px}

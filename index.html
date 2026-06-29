@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=22">
+<link rel="stylesheet" href="css/style.css?v=23">
 </head>
 <body>
 
@@ -427,18 +427,14 @@
 
 <!-- 우측 플로팅 퀵메뉴 -->
 <div class="quick-menu">
-  <a href="tel:1533-8429" class="float-btn float-tel" aria-label="전화 상담">
-    <span class="float-icon">📞</span>
-    <span class="float-txt">전화<br>상담</span>
+  <a href="tel:1533-8429" class="qm-item qm-tel" aria-label="전화 상담">
+    <span class="qm-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3l1.5 4-2 1.5a12 12 0 005 5l1.5-2 4 1.5v3a2 2 0 01-2 2A15 15 0 014 6a2 2 0 012-2"/></svg></span>
+    <span class="qm-tx">전화상담</span>
   </a>
-  <a href="#contact" class="float-btn" aria-label="상담 신청">
-    <span class="float-icon">✎</span>
-    <span class="float-txt">상담<br>신청</span>
+  <a href="#contact" class="qm-item qm-reg" aria-label="상담 신청">
+    <span class="qm-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4l10-10-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></svg></span>
+    <span class="qm-tx">상담신청</span>
   </a>
-  <button class="top-btn" id="topBtn" aria-label="맨 위로">
-    <span class="top-arrow">↑</span>
-    <span class="top-txt">TOP</span>
-  </button>
 </div>
 
 <!-- 제출 완료 모달 -->
