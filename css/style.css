@@ -90,7 +90,8 @@ em{font-style:normal}
 .header-menu .hm-dots i{width:4px;height:4px;border-radius:50%;background:var(--navy)}
 .header-tel{display:flex;align-items:center;gap:8px;color:#1c2940;font-size:25px;font-weight:800;letter-spacing:.02em}
 .header-tel .tel-ico{width:24px;height:24px;object-fit:contain;display:block}
-.header-tel:hover{color:var(--gold)}
+.header-tel:hover,.header-tel:active,.header-tel:focus{color:#1c2940}
+.header-tel{-webkit-tap-highlight-color:transparent}
 .logo{display:flex;align-items:center}
 .logo img{height:56px;width:auto;display:block}
 .gnb{display:flex;gap:28px}
@@ -627,7 +628,7 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   .lc-name{font-size:20px}
   .lc-dist{font-size:16px}
   .header-right{margin-left:auto;gap:12px}
-  .header-grand{padding:8px 14px;font-size:12px}
+  .header-grand{display:none}
   .p6-inner{grid-template-columns:1fr;gap:36px;padding:64px 24px}
   .p6-grid{grid-template-columns:repeat(2,1fr)}
   .p6-item:nth-child(3n){border-right:1px solid rgba(255,255,255,.14)}
@@ -671,8 +672,9 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   .contact-wrap{grid-template-columns:1fr;gap:28px;text-align:center}
   .contact-left{text-align:center}
   .hcontact-form{flex-wrap:wrap}
+  .hcontact-form{align-items:flex-start}
   .hcontact-form input{flex:1 1 100%}
-  .hcontact-form .agree{flex:1 1 100%;justify-content:center}
+  .hcontact-form .agree{flex:1 1 100%;justify-content:flex-start;text-align:left}
   .hcontact-form .btn{flex:1 1 100%}
   /* 1번 히어로: 건물(아파트) 잘 보이게 + 영문 한 줄 */
   .hero-bg{transform:none;background-position:50% 50%;background-size:cover;background-image:url('../images/main-m.jpg')}
