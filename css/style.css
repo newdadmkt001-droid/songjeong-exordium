@@ -696,9 +696,9 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   .edition-sec{grid-template-columns:1fr}
   .ed-card{min-height:260px}
   .ed-card-body{padding:0 24px 30px}
-  .ed-badge{font-size:13px;padding:6px 14px;margin-bottom:14px}
-  .ed-card-title{font-size:28px;margin-bottom:12px}
-  .ed-card-desc{font-size:14px;line-height:1.5}
+  .ed-badge{font-size:11px;padding:5px 12px;margin-bottom:16px}
+  .ed-card-title{font-size:33px;margin-bottom:14px}
+  .ed-card-desc{font-size:16px;line-height:1.5}
   /* 어메니티: 이미지 위 고지문 + 카운터를 버튼 줄에 */
   .am-slide-img{height:240px;min-height:0}
   .am-slide-panel{padding:28px 22px 30px}
@@ -719,7 +719,10 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   .header-tel{font-size:18px}
   .header-tel .tel-ico{font-size:15px}
   .logo img{height:46px}
-  .point-grid{grid-template-columns:1fr}
+  .point-grid{grid-template-columns:repeat(2,1fr)}
+  .point-card{min-height:200px;padding:32px 14px}
+  .pt-title{font-size:19px}
+  .pt-desc{font-size:13px}
   /* 평면도 탭: 작은 폰에서 안 잘리게 */
   .floor-tabs{gap:16px}
   .ftab{font-size:17px;padding-bottom:9px}
