@@ -137,6 +137,7 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
 .hero-title{font-family:'Pretendard',sans-serif;font-weight:800;margin-bottom:0;color:#fff;letter-spacing:-.01em;word-break:keep-all}
 .hero-title .ht-sm{display:block;font-size:clamp(22px,2.3vw,32px);font-weight:600;color:rgba(255,255,255,.92);margin-bottom:6px}
 .hero-title .ht-lg{display:block;font-size:clamp(44px,5.8vw,80px);line-height:1.1}
+.hero-eyebrow-ko{font-family:'Pretendard',sans-serif;font-weight:600;letter-spacing:.01em}
 .hero-form-m{display:none}
 .hero-scroll{display:inline-flex;flex-direction:row-reverse;align-items:center;gap:16px;margin-top:42px;text-decoration:none}
 .hs-text{font-family:'Cormorant Garamond',serif;font-size:16px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.85);animation:hsFade 2s ease-in-out infinite}
