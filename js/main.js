@@ -105,15 +105,15 @@
   // 평면도 타입 탭
   var floorViewer = document.getElementById('floorplan');
   if (floorViewer) {
-    var ftabs = floorViewer.querySelectorAll('.ftab');
-    var fpanels = floorViewer.querySelectorAll('.floor-panel');
-    ftabs.forEach(function (tab) {
-      tab.addEventListener('click', function () {
-        var type = tab.getAttribute('data-type');
-        ftabs.forEach(function (t) { t.classList.toggle('active', t.getAttribute('data-type') === type); });
-        fpanels.forEach(function (p) {
-          p.classList.toggle('active', p.getAttribute('data-type') === type);
-        });
+    floorViewer.addEventListener('click', function (e) {
+      var tab = e.target.closest('.ftab');
+      if (!tab || !floorViewer.contains(tab)) return;
+      var type = tab.getAttribute('data-type');
+      floorViewer.querySelectorAll('.ftab').forEach(function (t) {
+        t.classList.toggle('active', t.getAttribute('data-type') === type);
+      });
+      floorViewer.querySelectorAll('.floor-panel').forEach(function (p) {
+        p.classList.toggle('active', p.getAttribute('data-type') === type);
       });
     });
   }
