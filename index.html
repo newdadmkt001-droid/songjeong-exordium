@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=63">
+<link rel="stylesheet" href="css/style.css?v=64">
 </head>
 <body>
 <script>
@@ -46,22 +46,18 @@
     var n=(cur+dir+s.length)%s.length;
     for(i=0;i<s.length;i++){ s[i].classList.toggle('active', i===n); }
   }
-  function galSet(n){
-    var th=document.querySelectorAll('#gallery .gal-thumb'), m=document.getElementById('galMain'), i;
-    if(!th.length) return;
-    n=(n+th.length)%th.length;
-    for(i=0;i<th.length;i++){ th[i].classList.toggle('active', i===n); }
-    m.src=th[n].getAttribute('data-src');
+  function galList(){
+    var a=[], seen={}, th=document.querySelectorAll('#gallery .gal-thumb'), i, s;
+    for(i=0;i<th.length;i++){ s=th[i].getAttribute('data-src'); if(!seen[s]){ seen[s]=1; a.push(s); } }
+    return a;
   }
   function galMove(dir){
-    var th=document.querySelectorAll('#gallery .gal-thumb'), cur=0, i;
-    for(i=0;i<th.length;i++){ if(th[i].classList.contains('active')) cur=i; }
-    galSet(cur+dir);
+    var m=document.getElementById('galMain'); if(!m) return;
+    var a=galList(); if(!a.length) return;
+    var cur=a.indexOf(m.getAttribute('src')); if(cur<0) cur=0;
+    m.src=a[(cur+dir+a.length)%a.length];
   }
-  function galPick(el){
-    var th=document.querySelectorAll('#gallery .gal-thumb'), i;
-    for(i=0;i<th.length;i++){ if(th[i]===el){ galSet(i); return; } }
-  }
+  function galPick(el){ var m=document.getElementById('galMain'); if(m) m.src=el.getAttribute('data-src'); }
   function openZoom(src){
     var lb=document.getElementById('zoomLightbox'); if(!lb) return;
     document.getElementById('zoomImg').src=src;
@@ -309,10 +305,32 @@
         <button type="button" class="gal-arrow gal-next" aria-label="다음" onclick="galMove(1)">›</button>
       </div>
       <div class="gal-thumbs">
-        <button type="button" class="gal-thumb active" onclick="galPick(this)" data-src="images/사진1.jpg"><img src="images/사진1.jpg" alt=""></button>
-        <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진2.jpg"><img src="images/사진2.jpg" alt=""></button>
-        <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진3.jpg"><img src="images/사진3.jpg" alt=""></button>
-        <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진4.jpg"><img src="images/사진4.jpg" alt=""></button>
+        <div class="gal-track">
+          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진1.jpg"><img src="images/사진1.jpg" alt="" loading="lazy"></button>
+          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진2.jpg"><img src="images/사진2.jpg" alt="" loading="lazy"></button>
+          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진3.jpg"><img src="images/사진3.jpg" alt="" loading="lazy"></button>
+          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진4.jpg"><img src="images/사진4.jpg" alt="" loading="lazy"></button>
+          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진1.jpg"><img src="images/사진1.jpg" alt="" loading="lazy"></button>
+          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진2.jpg"><img src="images/사진2.jpg" alt="" loading="lazy"></button>
+          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진3.jpg"><img src="images/사진3.jpg" alt="" loading="lazy"></button>
+          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진4.jpg"><img src="images/사진4.jpg" alt="" loading="lazy"></button>
+          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진1.jpg"><img src="images/사진1.jpg" alt="" loading="lazy"></button>
+          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진2.jpg"><img src="images/사진2.jpg" alt="" loading="lazy"></button>
+          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진3.jpg"><img src="images/사진3.jpg" alt="" loading="lazy"></button>
+          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진4.jpg"><img src="images/사진4.jpg" alt="" loading="lazy"></button>
+          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진1.jpg"><img src="images/사진1.jpg" alt="" loading="lazy"></button>
+          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진2.jpg"><img src="images/사진2.jpg" alt="" loading="lazy"></button>
+          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진3.jpg"><img src="images/사진3.jpg" alt="" loading="lazy"></button>
+          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진4.jpg"><img src="images/사진4.jpg" alt="" loading="lazy"></button>
+          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진1.jpg"><img src="images/사진1.jpg" alt="" loading="lazy"></button>
+          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진2.jpg"><img src="images/사진2.jpg" alt="" loading="lazy"></button>
+          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진3.jpg"><img src="images/사진3.jpg" alt="" loading="lazy"></button>
+          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진4.jpg"><img src="images/사진4.jpg" alt="" loading="lazy"></button>
+          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진1.jpg"><img src="images/사진1.jpg" alt="" loading="lazy"></button>
+          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진2.jpg"><img src="images/사진2.jpg" alt="" loading="lazy"></button>
+          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진3.jpg"><img src="images/사진3.jpg" alt="" loading="lazy"></button>
+          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진4.jpg"><img src="images/사진4.jpg" alt="" loading="lazy"></button>
+        </div>
       </div>
     </div>
   </div>

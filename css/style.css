@@ -407,10 +407,13 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   background:rgba(0,0,0,.4);color:#fff;font-size:26px;line-height:1;cursor:pointer;z-index:2;transition:.2s}
 .gal-prev{left:16px}.gal-next{right:16px}
 @media (hover:hover){.gal-arrow:hover{background:var(--gold);color:#231a06}}
-.gal-thumbs{display:flex;gap:8px;margin-top:8px;overflow-x:auto;scrollbar-width:thin}
-.gal-thumb{flex:0 0 auto;width:150px;height:92px;border:none;padding:0;cursor:pointer;border-radius:4px;overflow:hidden;opacity:.5;transition:.2s;background:none}
+.gal-thumbs{margin-top:8px;overflow:hidden}
+.gal-track{display:flex;gap:8px;width:max-content;animation:galScroll 28s linear infinite}
+@keyframes galScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (hover:hover){.gal-thumbs:hover .gal-track{animation-play-state:paused}}
+.gal-thumb{flex:0 0 auto;width:150px;height:92px;border:none;padding:0;cursor:pointer;border-radius:4px;overflow:hidden;opacity:1;transition:.2s;background:none}
 .gal-thumb img{width:100%;height:100%;object-fit:cover;display:block}
-.gal-thumb.active{opacity:1;outline:3px solid var(--gold);outline-offset:-3px}
+@media (hover:hover){.gal-thumb:hover{outline:3px solid var(--gold);outline-offset:-3px}}
 .spec-wrap{margin-top:64px}
 .spec-title{font-size:clamp(24px,2.4vw,32px);font-weight:800;color:var(--navy);margin-bottom:24px}
 .spec-table{width:100%;border-collapse:collapse;border-top:2px solid var(--navy)}
