@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=67">
+<link rel="stylesheet" href="css/style.css?v=68">
 </head>
 <body>
 <script>
@@ -72,6 +72,23 @@
   }
   function closePopup(){ var p=document.getElementById('sitePopup'); if(p) p.classList.remove('show'); }
   function closePopupToday(){ try{ localStorage.setItem('popupHideDate', new Date().toDateString()); }catch(e){} closePopup(); }
+  var LEAD_ENDPOINT='https://script.google.com/macros/s/AKfycbyo-GKEic81CJ9ybo5vnZVrxA5n2MeEUQasdVphPf2xfMnzW7_JChssM3a9sZV_lBFF/exec';
+  function submitLead(form, e){
+    if(e) e.preventDefault();
+    var name=form.querySelector('[name="name"]');
+    var phone=form.querySelector('[name="phone"]');
+    var agree=form.querySelector('[name="agree"]');
+    if(!name.value.trim()){ alert('성함을 입력해 주세요.'); name.focus(); return false; }
+    var digits=phone.value.replace(/[^0-9]/g,'');
+    if(digits.length<10){ alert('연락처를 정확히 입력해 주세요.'); phone.focus(); return false; }
+    if(agree && !agree.checked){ alert('개인정보 수집·이용에 동의해 주세요.'); return false; }
+    var data={ source:form.getAttribute('data-form'), name:name.value.trim(), phone:digits,
+      type:(form.querySelector('[name="type"]')||{}).value||'', message:(form.querySelector('[name="message"]')||{}).value||'', time:new Date().toISOString() };
+    fetch(LEAD_ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},body:new URLSearchParams(data).toString()}).catch(function(){});
+    form.reset();
+    var m=document.getElementById('thanksModal'); if(m) m.classList.add('open');
+    return false;
+  }
 </script>
 
 <!-- ===================== 진입 팝업 ===================== -->
@@ -128,7 +145,7 @@
   </div>
   <div class="hero-form-m">
     <p class="hfm-title">방문예약 · 상담신청</p>
-    <form data-form="hero-mobile">
+    <form data-form="hero-mobile" onsubmit="return submitLead(this, event)">
       <div class="hfm-row">
         <input type="text" name="name" placeholder="성함" required>
         <input type="tel" name="phone" placeholder="연락처" required inputmode="numeric">
@@ -502,7 +519,7 @@
         <p class="contact-lead">전문상담사가 친절히 상담해드립니다.</p>
       </div>
 
-      <form class="hcontact-form" data-form="contact">
+      <form class="hcontact-form" data-form="contact" onsubmit="return submitLead(this, event)">
         <input type="text" name="name" placeholder="성함" required>
         <input type="tel" name="phone" placeholder="연락처 ('-' 없이 입력)" required inputmode="numeric">
         <label class="agree"><input type="checkbox" name="agree" required checked><span>개인정보 수집·이용 동의</span></label>
@@ -555,6 +572,6 @@
   </div>
 </div>
 
-<script src="js/main.js?v=7">
+<script src="js/main.js?v=8">
 </body>
 </html>

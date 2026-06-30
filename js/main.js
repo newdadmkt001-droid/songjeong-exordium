@@ -177,33 +177,7 @@
     }).then(function () {}).catch(function () {});
   }
 
-  document.querySelectorAll('form[data-form]').forEach(function (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var name = form.querySelector('[name="name"]');
-      var phone = form.querySelector('[name="phone"]');
-      var agree = form.querySelector('[name="agree"]');
-
-      if (!name.value.trim()) { alert('성함을 입력해 주세요.'); name.focus(); return; }
-      var digits = phone.value.replace(/[^0-9]/g, '');
-      if (digits.length < 10) { alert('연락처를 정확히 입력해 주세요.'); phone.focus(); return; }
-      if (agree && !agree.checked) { alert('개인정보 수집·이용에 동의해 주세요.'); return; }
-
-      var data = {
-        source: form.getAttribute('data-form'),
-        name: name.value.trim(),
-        phone: digits,
-        type: (form.querySelector('[name="type"]') || {}).value || '',
-        message: (form.querySelector('[name="message"]') || {}).value || '',
-        time: new Date().toISOString()
-      };
-
-      sendLead(data).then(function () {
-        form.reset();
-        openModal();
-      });
-    });
-  });
+  // 폼 제출은 index.html 인라인 submitLead()에서 처리(환경 호환성)
 
   // 연락처 숫자만 입력
   document.querySelectorAll('input[name="phone"]').forEach(function (input) {
