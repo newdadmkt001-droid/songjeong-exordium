@@ -739,7 +739,7 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   .hero-bg{transform:none;background-position:50% 38%;background-size:cover;background-image:url('../images/main.jpg')}
   .hero-eyebrow{font-size:16px;letter-spacing:.02em;white-space:nowrap;margin-bottom:12px}
   /* 히어로 하단 상담폼 (모바일) */
-  .hero-form-m{display:block;position:relative;z-index:6;margin:0 14px 16px;
+  .hero-form-m{display:none;position:relative;z-index:6;margin:0 14px 16px;
     background:rgba(11,17,28,.86);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
     border:1px solid rgba(198,160,88,.4);border-radius:16px;padding:16px 16px 14px;
     box-shadow:0 14px 36px rgba(0,0,0,.45)}
