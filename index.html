@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=69">
+<link rel="stylesheet" href="css/style.css?v=70">
 </head>
 <body>
 <script>
@@ -196,6 +196,31 @@
         </ul>
     </div>
     <img class="loc-map-m" src="images/입지mo.png" alt="입지 지도">
+  </div>
+</section>
+
+<!-- ===================== 조감도 갤러리 ===================== -->
+<section class="section overview-sec" id="overview">
+  <div class="container">
+    <div class="gallery" id="gallery">
+      <div class="gal-stage">
+        <button type="button" class="gal-arrow gal-prev" aria-label="이전" onclick="galMove(-1)">‹</button>
+        <img class="gal-main" id="galMain" src="images/사진1.jpg" alt="조감도">
+        <button type="button" class="gal-arrow gal-next" aria-label="다음" onclick="galMove(1)">›</button>
+      </div>
+      <div class="gal-thumbs">
+        <div class="gal-track">
+          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진1.jpg"><img src="images/사진1.jpg" alt="" loading="lazy"></button>
+          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진2.jpg"><img src="images/사진2.jpg" alt="" loading="lazy"></button>
+          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진3.jpg"><img src="images/사진3.jpg" alt="" loading="lazy"></button>
+          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진4.jpg"><img src="images/사진4.jpg" alt="" loading="lazy"></button>
+          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진1.jpg"><img src="images/사진1.jpg" alt="" loading="lazy"></button>
+          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진2.jpg"><img src="images/사진2.jpg" alt="" loading="lazy"></button>
+          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진3.jpg"><img src="images/사진3.jpg" alt="" loading="lazy"></button>
+          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진4.jpg"><img src="images/사진4.jpg" alt="" loading="lazy"></button>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -371,31 +396,6 @@
       </div>
       </div>
       <p class="am-disclaimer">본 이미지는 소비자의 이해를 돕기 위한 것으로 실제와 다를 수 있습니다.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== 조감도 갤러리 ===================== -->
-<section class="section overview-sec" id="overview">
-  <div class="container">
-    <div class="gallery" id="gallery">
-      <div class="gal-stage">
-        <button type="button" class="gal-arrow gal-prev" aria-label="이전" onclick="galMove(-1)">‹</button>
-        <img class="gal-main" id="galMain" src="images/사진1.jpg" alt="조감도">
-        <button type="button" class="gal-arrow gal-next" aria-label="다음" onclick="galMove(1)">›</button>
-      </div>
-      <div class="gal-thumbs">
-        <div class="gal-track">
-          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진1.jpg"><img src="images/사진1.jpg" alt="" loading="lazy"></button>
-          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진2.jpg"><img src="images/사진2.jpg" alt="" loading="lazy"></button>
-          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진3.jpg"><img src="images/사진3.jpg" alt="" loading="lazy"></button>
-          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진4.jpg"><img src="images/사진4.jpg" alt="" loading="lazy"></button>
-          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진1.jpg"><img src="images/사진1.jpg" alt="" loading="lazy"></button>
-          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진2.jpg"><img src="images/사진2.jpg" alt="" loading="lazy"></button>
-          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진3.jpg"><img src="images/사진3.jpg" alt="" loading="lazy"></button>
-          <button type="button" class="gal-thumb" onclick="galPick(this)" data-src="images/사진4.jpg"><img src="images/사진4.jpg" alt="" loading="lazy"></button>
-        </div>
-      </div>
     </div>
   </div>
 </section>
