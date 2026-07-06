@@ -237,7 +237,7 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
 .loc-img-head{text-align:center;margin-bottom:48px}
 .loc-img-head .eyebrow{margin-bottom:14px}
 .loc-full-img{display:block;width:100%;height:auto;border-radius:24px}
-.location{position:relative;background-size:auto 86%;background-position:right center;background-repeat:no-repeat;overflow:hidden;padding-bottom:140px}
+.location{position:relative;background-size:auto 86%;background-position:right center;background-repeat:no-repeat;overflow:hidden}
 .location::before{content:"";position:absolute;inset:0;z-index:0;
   background:linear-gradient(90deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.7) 24%,rgba(255,255,255,0) 44%)}
 .location .container{position:relative;z-index:1}
