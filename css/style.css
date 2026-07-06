@@ -821,8 +821,9 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   /* 조감도 갤러리 + 설계개요 모바일 */
   .gal-main{height:40vh;min-height:0}
   .gal-arrow{width:40px;height:40px;font-size:22px}
-  .gal-track{flex-wrap:nowrap;gap:5px}
-  .gal-thumb{flex:1 1 0;height:52px}
+  .gal-track{flex-wrap:nowrap;gap:6px}
+  .gal-thumb{flex:1 1 0;height:auto;aspect-ratio:16/10}
+  .gal-thumb:nth-child(n+5){display:none}
   .spec-wrap{margin-top:40px}
   .spec-table{border-top:2px solid var(--navy)}
   .spec-table tr{display:block;padding:12px 0;border-bottom:1px solid var(--line)}
