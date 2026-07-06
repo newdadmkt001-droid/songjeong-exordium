@@ -342,6 +342,7 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
 @media (hover:hover){.bk-arrow:hover{background:var(--gold);border-color:var(--gold);color:#231a06}}
 
 /* ============ AMENITY 슬라이더 ============ */
+.am-slider-sec{padding-bottom:140px}
 .am-slider-sec .amenity-head{margin-bottom:26px}
 .am-slider-sec .amenity-head .section-title{text-align:left}
 .am-slider{position:relative;overflow:hidden;border-radius:18px}
@@ -764,7 +765,7 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   .ed-card-desc{font-size:14px;line-height:1.55}
   /* 4번 어메니티: 네이비 패널 하단 모서리 둥글게 + 카드형 */
   .am-slider{overflow:hidden;border-radius:14px}
-  .am-slider-sec{overflow-x:hidden}
+  .am-slider-sec{overflow-x:hidden;padding-bottom:64px}
   .am-slide-img{border-radius:14px 14px 0 0}
   .am-slide-panel{border-radius:0 0 14px 14px}
   .price-vs{transform:rotate(90deg)}
@@ -820,8 +821,8 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   /* 조감도 갤러리 + 설계개요 모바일 */
   .gal-main{height:40vh;min-height:0}
   .gal-arrow{width:40px;height:40px;font-size:22px}
-  .gal-track{flex-wrap:wrap}
-  .gal-thumb{flex:1 1 calc(25% - 6px);height:54px}
+  .gal-track{flex-wrap:nowrap;gap:5px}
+  .gal-thumb{flex:1 1 0;height:52px}
   .spec-wrap{margin-top:40px}
   .spec-table{border-top:2px solid var(--navy)}
   .spec-table tr{display:block;padding:12px 0;border-bottom:1px solid var(--line)}
