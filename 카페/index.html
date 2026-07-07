@@ -73,6 +73,14 @@
   function closePopup(){ var p=document.getElementById('sitePopup'); if(p) p.classList.remove('show'); }
   function closePopupToday(){ try{ localStorage.setItem('popupHideDate', new Date().toDateString()); }catch(e){} closePopup(); }
   var LEAD_ENDPOINT='https://script.google.com/macros/s/AKfycbyo-GKEic81CJ9ybo5vnZVrxA5n2MeEUQasdVphPf2xfMnzW7_JChssM3a9sZV_lBFF/exec';
+  function pageSource(){
+    try{
+      var p=decodeURIComponent(location.pathname);
+      if(p.indexOf('블로그')>=0) return '블로그';
+      if(p.indexOf('카페')>=0) return '카페';
+    }catch(e){}
+    return '메인페이지';
+  }
   function submitLead(form, e){
     if(e) e.preventDefault();
     var name=form.querySelector('[name="name"]');
@@ -82,7 +90,7 @@
     var digits=phone.value.replace(/[^0-9]/g,'');
     if(digits.length<10){ alert('연락처를 정확히 입력해 주세요.'); phone.focus(); return false; }
     if(agree && !agree.checked){ alert('개인정보 수집·이용에 동의해 주세요.'); return false; }
-    var data={ source:form.getAttribute('data-form'), name:name.value.trim(), phone:digits,
+    var data={ source:pageSource(), name:name.value.trim(), phone:digits,
       type:(form.querySelector('[name="type"]')||{}).value||'', message:(form.querySelector('[name="message"]')||{}).value||'', time:new Date().toISOString() };
     fetch(LEAD_ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},body:new URLSearchParams(data).toString()}).catch(function(){});
     form.reset();
