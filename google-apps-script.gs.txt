@@ -9,16 +9,14 @@ function doPost(e) {
     var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
     // 첫 실행 시 헤더가 없으면 추가
     if (sheet.getLastRow() === 0) {
-      sheet.appendRow(['접수시각', '성함', '연락처', '유입(source)', '타입', '메모']);
+      sheet.appendRow(['접수시각', '성함', '연락처', '유입']);
     }
     var p = (e && e.parameter) ? e.parameter : {};
     sheet.appendRow([
       new Date(),
       p.name || '',
       "'" + (p.phone || ''),   // 앞자리 0 유지 위해 텍스트로
-      p.source || '',
-      p.type || '',
-      p.message || ''
+      p.source || ''
     ]);
     return ContentService
       .createTextOutput(JSON.stringify({ result: 'success' }))

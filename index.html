@@ -90,8 +90,7 @@
     var digits=phone.value.replace(/[^0-9]/g,'');
     if(digits.length<10){ alert('연락처를 정확히 입력해 주세요.'); phone.focus(); return false; }
     if(agree && !agree.checked){ alert('개인정보 수집·이용에 동의해 주세요.'); return false; }
-    var data={ source:pageSource(), name:name.value.trim(), phone:digits,
-      type:(form.querySelector('[name="type"]')||{}).value||'', message:(form.querySelector('[name="message"]')||{}).value||'', time:new Date().toISOString() };
+    var data={ source:pageSource(), name:name.value.trim(), phone:digits };
     fetch(LEAD_ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},body:new URLSearchParams(data).toString()}).catch(function(){});
     form.reset();
     var m=document.getElementById('thanksModal'); if(m) m.classList.add('open');
