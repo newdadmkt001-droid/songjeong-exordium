@@ -596,13 +596,14 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
 .last-screen .contact{flex:1 1 auto;min-height:0;scroll-snap-align:none;padding:0}
 .last-screen .site-footer{flex:0 0 auto}
 .contact{background:#fff;color:var(--ink)}
-.contact-wrap{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:56px}
+.contact-wrap{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:56px}
+.contact-wrap>*{min-width:0}
 .contact-left{text-align:left}
 .contact-left .section-title{color:var(--navy)}
 .contact-lead{font-size:19px;color:var(--gray);margin-top:14px;line-height:1.7}
 .hcontact-form{display:flex;align-items:center;gap:12px;flex-wrap:wrap;
   background:#f6f4ef;border:1px solid var(--line);border-radius:16px;padding:24px 26px}
-.hcontact-form input[type="text"],.hcontact-form input[type="tel"]{flex:1;min-width:150px;padding:15px 16px;border:1px solid var(--line);border-radius:8px;
+.hcontact-form input[type="text"],.hcontact-form input[type="tel"]{flex:1 1 150px;min-width:0;padding:15px 16px;border:1px solid var(--line);border-radius:8px;
   font-size:16px;font-family:inherit;background:#fff}
 .hcontact-form input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(198,160,88,.15)}
 .hcontact-form .agree{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;color:var(--gray);white-space:nowrap;margin:0;flex:0 0 auto}
@@ -846,4 +847,8 @@ body.menu-open .logo img{filter:brightness(0) invert(1)}
   .amenity-grid{grid-template-columns:1fr}
   .life-row{flex-wrap:wrap;gap:6px}
   .life-dist{flex:1;text-align:left}
+  /* 상담폼: 작은 폰에서 여백 줄여 잘림 방지 */
+  .hcontact-form{padding:18px 16px;gap:10px}
+  .hcontact-form input[type="text"],.hcontact-form input[type="tel"]{font-size:15px;padding:14px 14px}
+  .hcontact-form .btn{padding:15px 20px}
 }
